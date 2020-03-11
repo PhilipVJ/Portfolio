@@ -1,0 +1,26 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+li {
+  display:inline-flex;
+  padding: 20px;
+  text-align: center;
+align-items:center;
+  justify-content:center;
+}
+
+a {
+  font-family: 'Farro',  Farro-light;
+  align-self:center;
+  color:black;
+}
+
+a:hover{
+  color:#C74637;
+  text-decoration: none;
+}
