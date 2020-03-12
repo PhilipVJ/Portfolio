@@ -1,0 +1,22 @@
+<div class="projectView">
+  <div class="card projectCard" *ngFor="let project of projects">
+    <div class="card-body">
+      <h5 class="card-title">{{project.title}}</h5>
+      <p class="card-text">{{project.smallDescription}}</p>
+    </div>
+    <img class="card-img-top" src="{{project.img}}" alt="Card image cap">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{project.detailedDescription}}</li>
+      <li class="list-group-item">{{project.techniques}}</li>
+    </ul>
+    <div class="card-body iconSection">
+      <a *ngIf="project.githubLink!=null" href="https://www.github.com">
+        <fa-icon class="icon" size="2x" [icon]="gitHubLogo"></fa-icon>
+      </a>
+      <a *ngIf="project.downloadLink!=null" href="https://www.github.com">
+        <fa-icon class="icon" size="2x" [icon]="downloadIcon"></fa-icon>
+      </a>
+        <p *ngIf="project.downloadLink == null && project.githubLink == null">No available code or example</p>
+    </div>
+  </div>
+</div>

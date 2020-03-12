@@ -1,4 +1,13 @@
-.homeCarousel{
-  width: 50%;
-  padding-top: 200px;
+.welcomeSection{
+margin-top: 50px;
+}
+
+p{
+  font-family: 'Farro',  Farro-light;
+  align-self:center;
+  color:black;
+}
+
+#welcomeImage{
+  width:640px;
 }

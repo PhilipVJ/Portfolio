@@ -1,0 +1,33 @@
+.icon {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.iconSection {
+  text-align: right;
+  height: 70px;
+}
+
+.projectView {
+  margin-top:50px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.projectCard {
+  margin-bottom: 50px;
+  display: inline-block;
+  text-align: left;
+  width:400px;
+  margin-left:25px;
+  margin-right:25px;
+}
