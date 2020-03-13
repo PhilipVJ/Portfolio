@@ -31,3 +31,22 @@ a, a:hover, a:focus, a:active {
   margin-left:25px;
   margin-right:25px;
 }
+
+.categoryButton{
+margin-right:25px;
+}
+
+.buttonContainer{
+  width: 900px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: right;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #9FA9B1 !important;
+}
+
+.lastCard{
+  width: 100%;
+}

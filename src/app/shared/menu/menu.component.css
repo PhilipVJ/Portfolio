@@ -7,20 +7,26 @@ ul {
 }
 
 li {
-  display:inline-flex;
+  display: inline-flex;
   padding: 20px;
   text-align: center;
-align-items:center;
-  justify-content:center;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  text-align: center;
 }
 
 a {
-  font-family: 'Farro',  Farro-light;
-  align-self:center;
-  color:black;
+  font-family: 'Farro', Farro-light;
+  align-self: center;
+  color: black;
 }
 
-a:hover{
-  color:#C74637;
+a:hover {
+  color: #C74637;
   text-decoration: none;
+}
+
+.selectedMenuItem{
+  color:#D6A04B;
 }

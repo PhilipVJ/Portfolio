@@ -1,5 +1,25 @@
+<div class="buttonContainer">
+  <div class="btn-group categoryButton" dropdown>
+    <button id="button-animated" dropdownToggle type="button" class="btn light dropdown-toggle"
+            aria-controls="dropdown-animated">
+      Categories <span class="caret"></span>
+    </button>
+    <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu"
+        role="menu" aria-labelledby="button-animated">
+      <li role="menuitem"><a class="dropdown-item" href="#">Show all</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">JavaFX</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Windows Forms</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Unity</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Android</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Miscellaneous</a></li>
+    </ul>
+
+
+  </div>
+</div>
+
 <div class="projectView">
-  <div class="card projectCard" *ngFor="let project of projects">
+  <div class="card projectCard" *ngFor="let project of projects; first as isFirst" [class.lastCard]="isFirst && projects.length % 2 != 0">
     <div class="card-body">
       <h5 class="card-title">{{project.title}}</h5>
       <p class="card-text">{{project.smallDescription}}</p>
@@ -16,7 +36,7 @@
       <a *ngIf="project.downloadLink!=null" href="https://www.github.com">
         <fa-icon class="icon" size="2x" [icon]="downloadIcon"></fa-icon>
       </a>
-        <p *ngIf="project.downloadLink == null && project.githubLink == null">No available code or example</p>
+      <p *ngIf="project.downloadLink == null && project.githubLink == null">No available code or example</p>
     </div>
   </div>
 </div>
