@@ -2,41 +2,56 @@
   <div class="btn-group categoryButton" dropdown>
     <button id="button-animated" dropdownToggle type="button" class="btn light dropdown-toggle"
             aria-controls="dropdown-animated">
-      Categories <span class="caret"></span>
+      Category <span class="caret"></span>
     </button>
     <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu"
         role="menu" aria-labelledby="button-animated">
-      <li role="menuitem"><a class="dropdown-item" href="#">Show all</a></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">JavaFX</a></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Windows Forms</a></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Unity</a></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Android</a></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Miscellaneous</a></li>
+      <li (click)="changeCategory('Show all')" role="menuitem"><a class="dropdown-item"
+                                                                  [class.chosenCategory]="chosenCategory === 'Show all'">
+        Show all</a></li>
+      <li (click)="changeCategory('JavaFX')" role="menuitem"><a class="dropdown-item"
+                                                                [class.chosenCategory]="chosenCategory === 'JavaFX'">JavaFX</a>
+      </li>
+      <li (click)="changeCategory('Windows Forms')" role="menuitem"><a class="dropdown-item"
+                                                                       [class.chosenCategory]="chosenCategory === 'Windows Forms'">Windows
+        Forms</a></li>
+      <li (click)="changeCategory('Unity')" role="menuitem"><a class="dropdown-item"
+                                                               [class.chosenCategory]="chosenCategory === 'Unity'">Unity</a>
+      </li>
+      <li (click)="changeCategory('Android')" role="menuitem"><a class="dropdown-item"
+                                                                 [class.chosenCategory]="chosenCategory === 'Android'">Android</a>
+      </li>
+      <li (click)="changeCategory('Miscellaneous')" role="menuitem"><a class="dropdown-item"
+                                                                       [class.chosenCategory]="chosenCategory === 'Miscellaneous'">Miscellaneous</a>
+      </li>
     </ul>
-
-
   </div>
 </div>
 
 <div class="projectView">
-  <div class="card projectCard" *ngFor="let project of projects; first as isFirst" [class.lastCard]="isFirst && projects.length % 2 != 0">
-    <div class="card-body">
-      <h5 class="card-title">{{project.title}}</h5>
-      <p class="card-text">{{project.smallDescription}}</p>
+    <div class="card projectCard" *ngFor="let project of projects; first as isFirst"
+         [class.lastCard]="isFirst && projects.length % 2 != 0">
+      <div class="card-body titleArea">
+        <h5 class="card-title">{{project.title}}</h5>
+        <p class="card-text">{{project.smallDescription}}</p>
+      </div>
+      <div class="center">
+        <img class="image" src="{{project.img}}" alt="Card image cap">
+      </div>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{project.detailedDescription}}</li>
+        <li class="list-group-item">Tools: {{project.tools}}</li>
+        <li class="list-group-item">Techniques: {{project.techniques}}</li>
+      </ul>
+      <div class="card-body iconSection">
+        <a *ngIf="project.githubLink!=null" href="https://www.github.com">
+          <fa-icon class="icon" size="2x" [icon]="gitHubLogo"></fa-icon>
+        </a>
+        <a *ngIf="project.downloadLink!=null" href="{{project.downloadLink}}">
+          <fa-icon class="icon" size="2x" [icon]="downloadIcon"></fa-icon>
+        </a>
+        <p *ngIf="project.downloadLink == null && project.githubLink == null">No available code or example</p>
+      </div>
     </div>
-    <img class="card-img-top" src="{{project.img}}" alt="Card image cap">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">{{project.detailedDescription}}</li>
-      <li class="list-group-item">{{project.techniques}}</li>
-    </ul>
-    <div class="card-body iconSection">
-      <a *ngIf="project.githubLink!=null" href="https://www.github.com">
-        <fa-icon class="icon" size="2x" [icon]="gitHubLogo"></fa-icon>
-      </a>
-      <a *ngIf="project.downloadLink!=null" href="https://www.github.com">
-        <fa-icon class="icon" size="2x" [icon]="downloadIcon"></fa-icon>
-      </a>
-      <p *ngIf="project.downloadLink == null && project.githubLink == null">No available code or example</p>
-    </div>
-  </div>
 </div>

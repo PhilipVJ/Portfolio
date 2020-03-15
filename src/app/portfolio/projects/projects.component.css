@@ -5,12 +5,20 @@
 
 a, a:hover, a:focus, a:active {
   text-decoration: none;
+  cursor: pointer;
   color: inherit;
+}
+
+a.chosenCategory, a:hover.chosenCategory, a:focus.chosenCategory, a:active.chosenCategory{
+  color:#D6A04B;
 }
 
 .iconSection {
   text-align: right;
-  height: 70px;
+}
+
+.titleArea{
+  min-height: 125px;
 }
 
 .projectView {
@@ -32,6 +40,15 @@ a, a:hover, a:focus, a:active {
   margin-right:25px;
 }
 
+.center{
+  text-align: center;
+}
+
+.image{
+  width:90%;
+  margin-bottom: 10px;
+}
+
 .categoryButton{
 margin-right:25px;
 }
@@ -47,6 +64,10 @@ margin-right:25px;
   background-color: #9FA9B1 !important;
 }
 
+
+
 .lastCard{
   width: 100%;
 }
+
+

@@ -15,9 +15,22 @@ export class ProjectsComponent implements OnInit {
   gitHubLogo = faGithubSquare;
   downloadIcon = faDownload;
   projects: Project[];
+  chosenCategory: string;
 
   constructor(private projectsService: ProjectsService) {
-    this.projects = projectsService.getProject();
+    // Getting all projects and setting the chosen category to all from the start
+    this.chosenCategory = 'Show all';
+    this.projects = projectsService.getAllProjects();
+  }
+
+  changeCategory(category: string) {
+    this.chosenCategory = category;
+    if (category === 'Show all') {
+      this.projects = this.projectsService.getAllProjects();
+    } else {
+      this.projects = this.projectsService.getProjectsByCategory(category);
+      console.log('size:' + this.projects.length);
+    }
   }
 
   ngOnInit() {

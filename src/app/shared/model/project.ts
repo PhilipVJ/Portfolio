@@ -8,4 +8,5 @@ export interface Project {
   techniques: string[];
   downloadLink?: string;
   githubLink?: string;
+  isSchoolProject: boolean;
 }
