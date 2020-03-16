@@ -79,7 +79,7 @@ a.chosenCategory, a:hover.chosenCategory, a:focus.chosenCategory, a:active.chose
 }
 
 .categoryButton{
-margin-left:10px;
+margin-right:10px;
 }
 
 .buttonContainer{
@@ -87,7 +87,7 @@ margin-left:10px;
   width: 900px;
   margin-left:auto;
   margin-right:auto;
-  text-align: left;
+  text-align: right;
 }
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {

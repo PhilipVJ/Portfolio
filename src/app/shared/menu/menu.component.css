@@ -27,17 +27,13 @@ a:hover {
   text-decoration: none;
 }
 
-#menuIcon {
-  margin-right: 25px;
-}
-
-
 #mobileMenu {
   width: 100%;
 }
 
 #menuButton {
- text-align: right;
+ text-align: center;
+  margin-bottom: 10px;
 }
 
 .selectedMenuItem {
