@@ -34,10 +34,10 @@ a.chosenCategory, a:hover.chosenCategory, a:focus.chosenCategory, a:active.chose
 
 @media only screen and (max-width: 920px) {
   .projectView{
-    width:85%;
+    width:100%;
   }
   .projectCard{
-    width:80% !important;
+    width:100% !important;
   }
   .buttonContainer{
     width: 95% !important;
