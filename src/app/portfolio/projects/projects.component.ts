@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {faGithubSquare} from '@fortawesome/free-brands-svg-icons';
 import {faDownload} from '@fortawesome/free-solid-svg-icons';
+import {faUniversity} from '@fortawesome/free-solid-svg-icons';
+import {faTools} from '@fortawesome/free-solid-svg-icons';
 import {ProjectsService} from '../../shared/services/projects.service';
 import {Project} from '../../shared/model/project';
 import {BsDropdownConfig} from 'ngx-bootstrap';
@@ -14,6 +16,8 @@ import {BsDropdownConfig} from 'ngx-bootstrap';
 export class ProjectsComponent implements OnInit {
   gitHubLogo = faGithubSquare;
   downloadIcon = faDownload;
+  schoolIcon = faUniversity;
+  toolsIcon = faTools;
   projects: Project[];
   chosenCategory: string;
 

@@ -12,6 +12,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {BsDropdownModule, CarouselModule, CollapseModule} from 'ngx-bootstrap';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NoContentComponent } from './shared/no-content/no-content.component';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ProjectsComponent,
     SocialmediaComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    NoContentComponent
   ],
   imports: [
     FontAwesomeModule,
@@ -31,7 +34,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     CarouselModule,
     CollapseModule,
     BrowserAnimationsModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
