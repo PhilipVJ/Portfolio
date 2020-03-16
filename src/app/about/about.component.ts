@@ -8,10 +8,16 @@ import {ApplicationService} from '../shared/services/application.service';
 })
 export class AboutComponent implements OnInit {
 
+  imagesLoaded = 0;
   constructor(private applicationService: ApplicationService) { }
 
   ngOnInit() {
+    console.log('test');
     this.applicationService.setNavBarState('about');
+  }
+
+  loaded() {
+    this.imagesLoaded ++;
   }
 
 }

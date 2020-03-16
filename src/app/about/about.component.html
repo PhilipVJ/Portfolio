@@ -1,6 +1,6 @@
-<div id="mainSection">
+<div id="mainSection" [hidden]="imagesLoaded!=3">
   <div class="infoSection rounded">
-    <img class="headline" src="assets/images/myself.png">
+    <img class="headline" src="assets/images/myself.png" (load)="loaded()">
     <div class="textSection">
       <p>I am a 31-year-old man living in Esbjerg, where I spent a lot of time programming and developing. Besides
         typing
@@ -18,7 +18,7 @@
 
   <div class="infoSection rounded">
 
-    <img class="headline" src="assets/images/education.png">
+    <img class="headline" src="assets/images/education.png" (load)="loaded()">
     <div class="textSection">
       <p>In 2018 I decided to begin studying Computer Science (CS) in Esbjerg, which ended up being one of the best
         decisions of my life. Prior to that I had almost zero experience with programming, but after the first few
@@ -31,7 +31,7 @@
 
   <div class="infoSection rounded">
 
-    <img class="headline" src="assets/images/skills.png">
+    <img class="headline" src="assets/images/skills.png" (load)="loaded()">
     <div class="textSection">
       <p>During my studies I have acquired several CS skills ranging from building Rest APIs using .NET Core to building
         games using the Unity Engine. Instead of putting all my technical skills into writing I highly recommend
@@ -40,5 +40,10 @@
         consider my most valuable skill is my ability to quickly look at a problem, come up with several solutions
         for it and implement the one, which is the best fit.</p>
     </div>
+  </div>
+</div>
+<div class="d-flex justify-content-center">
+  <div *ngIf="imagesLoaded<3" class="spinner-border loader" role="status">
+    <span class="sr-only">Loading...</span>
   </div>
 </div>

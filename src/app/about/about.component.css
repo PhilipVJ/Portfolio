@@ -34,6 +34,10 @@ p{
 
 }
 
+.loader{
+  margin-top:50px
+}
+
 .headline{
   width: 100%;
   border-bottom:  solid 5px #3B4949;
