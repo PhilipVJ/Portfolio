@@ -1,24 +1,8 @@
-<div id="mainMenu">
+<div>
 <ul>
   <li><a routerLink=""  [class.selectedMenuItem]="chosenMenu == 'home'">Home</a></li> |
   <li><a routerLink="/about" [class.selectedMenuItem]="chosenMenu == 'about'">About</a></li> |
   <li><a routerLink="/portfolio"[class.selectedMenuItem]="chosenMenu == 'portfolio'">Portfolio</a></li> |
   <li><a routerLink="/contact"[class.selectedMenuItem]="chosenMenu == 'contact'">Contact</a></li>
 </ul>
-</div>
-<div id="mobileMenu">
-  <div id="menuButton" (click)="isCollapsed = !isCollapsed"
-       [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
-    <fa-icon id="menuIcon" size="2x" [icon]="barsIcon"></fa-icon>
-  </div>
-  <div id="collapseBasic" class="collapsedItems" (click)="clickMenu()" [collapse]="isCollapsed" [isAnimated]="true">
-    <a class="well well-lg card card-block card-header" routerLink="" (click)="chosenMenu='home'"
-       [class.selectedMenuItem]="chosenMenu == 'home'">Home</a>
-    <a class="well well-lg card card-block card-header" routerLink="/about" (click)="chosenMenu='about'"
-       [class.selectedMenuItem]="chosenMenu == 'about'">About</a>
-    <a class="well well-lg card card-block card-header" routerLink="/portfolio" (click)="chosenMenu='portfolio'"
-       [class.selectedMenuItem]="chosenMenu == 'portfolio'">Portfolio</a>
-    <a class="well well-lg card card-block card-header" routerLink="/contact" (click)="chosenMenu='contact'"
-       [class.selectedMenuItem]="chosenMenu == 'contact'">Contact</a>
-  </div>
 </div>

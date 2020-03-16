@@ -1,3 +1,24 @@
-.mainSection{
+.mainSection {
   min-height: 500px;
+}
+
+@media only screen and (max-width: 650px) {
+  #nonMobileMenu {
+    display: none;
+  }
+
+  #mobileMenu {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 651px) {
+  #mobileMenu {
+    display: none;
+  }
+}
+
+
+#mobileMenu {
+  width: 100%;
 }

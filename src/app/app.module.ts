@@ -14,6 +14,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NoContentComponent } from './shared/no-content/no-content.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { MobileMenuComponent } from './shared/mobile-menu/mobile-menu.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
     SocialmediaComponent,
     ContactComponent,
     HomeComponent,
-    NoContentComponent
+    NoContentComponent,
+    MobileMenuComponent
   ],
   imports: [
     FontAwesomeModule,

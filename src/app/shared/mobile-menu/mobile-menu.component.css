@@ -1,0 +1,77 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+li {
+  display: inline-flex;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  text-align: center;
+}
+
+a {
+  font-family: 'Farro', Farro-light;
+  align-self: center;
+  color: black;
+}
+
+a:hover {
+  color: #C74637;
+  text-decoration: none;
+}
+
+.logo {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mobileMenu {
+  margin-top:5px;
+  position: relative;
+  height: 50px;
+  text-align: center;
+}
+
+#menuButton {
+  margin-top: 5px;
+  margin-left: 5px;
+  float: left;
+}
+
+#socialMediaSection {
+  float: right;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+
+.selectedMenuItem {
+  color: #D6A04B;
+}
+
+.collapsedItems {
+  margin-top:5px;
+  text-align: center;
+}
+
+.icon {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#socialMediaSection a, #socialMediaSection a:hover, #socialMediaSection a:focus,  #socialMediaSection a:active {
+  text-decoration: none;
+  color: inherit;
+}

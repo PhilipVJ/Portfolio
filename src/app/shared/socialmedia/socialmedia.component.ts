@@ -11,7 +11,7 @@ import {faYoutubeSquare} from '@fortawesome/free-brands-svg-icons';
 export class SocialmediaComponent implements OnInit {
   gitHubLogo = faGithubSquare;
   facebookLogo = faFacebookSquare;
-  youtubeLogo = faYoutubeSquare
+  youtubeLogo = faYoutubeSquare;
 
   constructor() {
   }
