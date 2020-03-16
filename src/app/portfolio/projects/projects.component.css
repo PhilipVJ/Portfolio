@@ -55,6 +55,7 @@ a.chosenCategory, a:hover.chosenCategory, a:focus.chosenCategory, a:active.chose
   margin-right:25px;
 }
 .noProjectsView{
+  width: 95%;
   margin-top:75px;
   text-align: center;
   margin-left:auto;

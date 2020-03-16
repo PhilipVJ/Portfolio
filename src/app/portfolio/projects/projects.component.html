@@ -4,7 +4,7 @@
             aria-controls="dropdown-animated">
       Category <span class="caret"></span>
     </button>
-    <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu"
+    <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu dropdown-menu-right"
         role="menu" aria-labelledby="button-animated">
       <li (click)="changeCategory('Show all')" role="menuitem"><a class="dropdown-item"
                                                                   [class.chosenCategory]="chosenCategory === 'Show all'">
