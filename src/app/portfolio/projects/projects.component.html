@@ -30,7 +30,7 @@
 
 <div class="projectView" *ngIf="projects.length>0">
     <div class="card projectCard" *ngFor="let project of projects; first as isFirst"
-         [class.lastCard]="isFirst && projects.length % 2 != 0">
+         [class.lastCard]="isFirst && projects.length % 2 != 0 && innerWidth>920">
       <div class="card-body titleArea">
         <div id="schoolIcon" tooltip="{{project.title}} was made as a school project" [delay]="500" container="body">
           <fa-icon class="icon" size="1x" [icon]="schoolIcon"></fa-icon>

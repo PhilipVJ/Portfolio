@@ -15,6 +15,11 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.addEventListener('resize', (event) => {
+      if (this.isCollapsed === false) {
+        this.isCollapsed = true;
+      }
+    });
   }
 
   clickMenu() {

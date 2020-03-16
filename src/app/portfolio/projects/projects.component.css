@@ -22,13 +22,24 @@ a.chosenCategory, a:hover.chosenCategory, a:focus.chosenCategory, a:active.chose
 }
 
 .projectView {
-  margin-top:50px;
+  margin-top:25px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   width: 900px;
   margin-left:auto;
   margin-right:auto;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 920px) {
+  .projectView{
+    width:85%;
+  }
+  .buttonContainer{
+    width: 95% !important;
+    margin-top:15px;
+  }
 }
 
 #schoolIcon{
@@ -68,14 +79,15 @@ a.chosenCategory, a:hover.chosenCategory, a:focus.chosenCategory, a:active.chose
 }
 
 .categoryButton{
-margin-right:25px;
+margin-left:10px;
 }
 
 .buttonContainer{
+  margin-top:10px;
   width: 900px;
   margin-left:auto;
   margin-right:auto;
-  text-align: right;
+  text-align: left;
 }
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {faGithubSquare} from '@fortawesome/free-brands-svg-icons';
 import {faDownload} from '@fortawesome/free-solid-svg-icons';
 import {faUniversity} from '@fortawesome/free-solid-svg-icons';
@@ -20,6 +20,7 @@ export class ProjectsComponent implements OnInit {
   toolsIcon = faTools;
   projects: Project[];
   chosenCategory: string;
+  innerWidth: any;
 
   constructor(private projectsService: ProjectsService) {
     // Getting all projects and setting the chosen category to all from the start
@@ -38,6 +39,11 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.innerWidth = window.innerWidth;
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+  }
 }

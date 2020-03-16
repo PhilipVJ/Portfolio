@@ -2,12 +2,6 @@
   color: black;
 }
 
-
-
-#contact {
-  display: flex;
-}
-
 #header p {
   font-family: 'Farro', 'Farro', Farro-b;
   font-size: 45px;
@@ -29,6 +23,12 @@
   margin-right: auto;
   margin-top: 50px;
   width: 700px;
+}
+
+@media only screen and (max-width: 850px) {
+  .mainSection{
+    width:85%;
+  }
 }
 
 #iconSection {
