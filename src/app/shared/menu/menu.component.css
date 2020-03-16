@@ -27,6 +27,35 @@ a:hover {
   text-decoration: none;
 }
 
-.selectedMenuItem{
-  color:#D6A04B;
+#menuIcon {
+  margin-right: 25px;
+}
+
+
+#mobileMenu {
+  width: 100%;
+}
+
+#menuButton {
+ text-align: right;
+}
+
+.selectedMenuItem {
+  color: #D6A04B;
+}
+
+@media only screen and (max-width: 650px) {
+  #mainMenu {
+    display: none;
+  }
+
+  #mobileMenu {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 651px) {
+  #mobileMenu {
+    display: none;
+  }
 }

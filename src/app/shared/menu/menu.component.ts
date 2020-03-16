@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-menu',
@@ -6,7 +7,9 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-chosenMenu: string;
+  barsIcon = faBars;
+  chosenMenu: string;
+  isCollapsed = true;
 
   constructor() {
   }
@@ -14,5 +17,12 @@ chosenMenu: string;
   ngOnInit() {
   }
 
+  clickMenu() {
+    if (this.isCollapsed === true) {
+      this.isCollapsed = false;
+    } else {
+      this.isCollapsed = true;
+    }
+  }
 
 }

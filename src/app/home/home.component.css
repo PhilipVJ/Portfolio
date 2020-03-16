@@ -10,4 +10,10 @@ p{
 
 #welcomeImage{
   width:640px;
+
+}
+@media only screen and (max-width: 650px) {
+  #welcomeImage{
+    width:80%;
+  }
 }
