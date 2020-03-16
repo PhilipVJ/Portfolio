@@ -39,7 +39,7 @@ export class ProjectsService {
       tools: ['Unity, Visual Studio'],
       downloadLink: 'https://www.dropbox.com/s/2ccdhy40jbhlo21/Zondi.rar?dl=0',
       isSchoolProject: true
-  }
+  };
 
     const projectList: Project[] = [whenHellArrived, zondi];
     this.allProjects = projectList;
