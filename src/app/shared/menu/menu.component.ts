@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
+import {ApplicationService} from '../services/application.service';
 
 @Component({
   selector: 'app-menu',
@@ -11,7 +12,9 @@ export class MenuComponent implements OnInit {
   chosenMenu: string;
   isCollapsed = true;
 
-  constructor() {
+
+  constructor(private applicationService: ApplicationService) {
+    applicationService.navState.subscribe(result => this.chosenMenu = result);
   }
 
   ngOnInit() {

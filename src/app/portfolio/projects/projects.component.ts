@@ -6,6 +6,7 @@ import {faTools} from '@fortawesome/free-solid-svg-icons';
 import {ProjectsService} from '../../shared/services/projects.service';
 import {Project} from '../../shared/model/project';
 import {BsDropdownConfig} from 'ngx-bootstrap';
+import {ApplicationService} from '../../shared/services/application.service';
 
 @Component({
   selector: 'app-projectsview',
@@ -22,7 +23,7 @@ export class ProjectsComponent implements OnInit {
   chosenCategory: string;
   innerWidth: any;
 
-  constructor(private projectsService: ProjectsService) {
+  constructor(private projectsService: ProjectsService, private applicationService: ApplicationService) {
     // Getting all projects and setting the chosen category to all from the start
     this.chosenCategory = 'Show all';
     this.projects = projectsService.getAllProjects();
@@ -39,6 +40,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.applicationService.setNavBarState('portfolio');
     this.innerWidth = window.innerWidth;
   }
 
