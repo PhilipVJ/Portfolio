@@ -56,19 +56,19 @@ a.chosenCategory, a:hover.chosenCategory, a:focus.chosenCategory, a:active.chose
 }
 .noProjectsView{
   width: 95%;
-  margin-top:75px;
   text-align: center;
-  margin-left:auto;
-  margin-right:auto;
+  margin: 75px auto 50px;
+  padding-right:10px;
+  padding-left:10px;
 }
 
 #soonText{
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #noProjectsText{
   margin-top: 25px;
-  font-size: 25px;
+  font-size: 22px;
 }
 .center{
   text-align: center;
