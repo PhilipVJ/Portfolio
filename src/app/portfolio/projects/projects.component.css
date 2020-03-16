@@ -36,6 +36,9 @@ a.chosenCategory, a:hover.chosenCategory, a:focus.chosenCategory, a:active.chose
   .projectView{
     width:85%;
   }
+  .projectCard{
+    width:80% !important;
+  }
   .buttonContainer{
     width: 95% !important;
     margin-top:15px;
@@ -49,7 +52,7 @@ a.chosenCategory, a:hover.chosenCategory, a:focus.chosenCategory, a:active.chose
 .projectCard {
   margin-bottom: 50px;
   display: inline-block;
-  text-align: left;
+  text-align: justify;
   width:400px;
   margin-left:25px;
   margin-right:25px;
