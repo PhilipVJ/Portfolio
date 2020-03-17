@@ -43,7 +43,7 @@
       </div>
 
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{project.detailedDescription}}</li>
+        <li class="list-group-item" [class.detailedSection]="!isFirst && innerWidth>920">{{project.detailedDescription}}</li>
         <li class="list-group-item">Tools: {{project.tools}}</li>
         <li class="list-group-item">Techniques: {{project.techniques}}</li>
       </ul>

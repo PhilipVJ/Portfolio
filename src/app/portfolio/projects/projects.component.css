@@ -21,6 +21,10 @@ a.chosenCategory, a:hover.chosenCategory, a:focus.chosenCategory, a:active.chose
   min-height: 125px;
 }
 
+.detailedSection{
+  min-height:200px;
+}
+
 .projectView {
   margin-top:25px;
   text-align: center;
