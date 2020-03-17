@@ -48,7 +48,7 @@
         <li class="list-group-item">Techniques: {{project.techniques}}</li>
       </ul>
       <div class="card-body iconSection">
-        <a *ngIf="project.githubLink!=null" href="https://www.github.com">
+        <a *ngIf="project.githubLink!=null" href="{{project.githubLink}}">
           <fa-icon class="icon" size="2x" [icon]="gitHubLogo"></fa-icon>
         </a>
         <a *ngIf="project.downloadLink!=null" href="{{project.downloadLink}}">
