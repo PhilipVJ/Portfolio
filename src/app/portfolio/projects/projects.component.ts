@@ -35,7 +35,6 @@ export class ProjectsComponent implements OnInit {
       this.projects = this.projectsService.getAllProjects();
     } else {
       this.projects = this.projectsService.getProjectsByCategory(category);
-      console.log('size:' + this.projects.length);
     }
   }
 

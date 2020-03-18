@@ -12,7 +12,6 @@ export class AboutComponent implements OnInit {
   constructor(private applicationService: ApplicationService) { }
 
   ngOnInit() {
-    console.log('test');
     this.applicationService.setNavBarState('about');
   }
 
