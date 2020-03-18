@@ -36,7 +36,7 @@
          [class.lastCard]="isFirst && projects.length % 2 != 0 && innerWidth>920">
       <div class="card-body titleArea">
         <div id="schoolIcon" tooltip="{{project.title}} was made as a school project" [delay]="500" container="body">
-          <fa-icon class="icon" size="1x" [icon]="schoolIcon"></fa-icon>
+          <fa-icon class="icon" *ngIf="project.isSchoolProject" size="1x" [icon]="schoolIcon"></fa-icon>
         </div>
         <h5 class="card-title">{{project.title}}</h5>
         <p class="card-text">{{project.smallDescription}}</p>
