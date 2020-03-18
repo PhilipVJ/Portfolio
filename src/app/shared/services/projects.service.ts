@@ -54,8 +54,20 @@ export class ProjectsService {
       githubLink: 'https://github.com/PhilipVJ/WebCrawler',
       isSchoolProject: true
     };
+    const portfolioSite: Project = {
+      category: 'Angular',
+      // tslint:disable-next-line:max-line-length
+      detailedDescription: 'This is the actual website you are visiting right now. It is made using the Angular framework and later deployed to Firebase Hosting. I made it to have my work easily accessible for others to see - but also just for fun',
+      smallDescription: 'Web application made using Angular and ngx-bootstrap',
+      img: 'assets/images/projects/portfolio.png',
+      techniques: ['Angular, ngx-bootstrap'],
+      title: 'Philip Jensen',
+      isSchoolProject: false,
+      tools: ['WebStorm, Firebase'],
+      githubLink: 'https://github.com/PhilipVJ/Portfolio/',
+    };
 
-    const projectList: Project[] = [whenHellArrived, zondi, webCrawler];
+    const projectList: Project[] = [whenHellArrived, zondi, webCrawler, portfolioSite];
     this.allProjects = projectList;
   }
 

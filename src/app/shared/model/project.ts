@@ -9,4 +9,5 @@ export interface Project {
   downloadLink?: string;
   githubLink?: string;
   isSchoolProject: boolean;
+  addBorder?: boolean;
 }
