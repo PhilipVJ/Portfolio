@@ -18,7 +18,15 @@ p{
   }
 
   #infoSection{
-    width: 80% !important;
+    width: 90% !important;
+  }
+
+  .headLine{
+    font-size: 12pt !important;
+  }
+
+  .text{
+    font-size: 8pt !important;
   }
 
 }
@@ -28,7 +36,7 @@ p{
   margin-left: auto;
   margin-right: auto;
   width: 640px;
-  border:  solid 5px #3B4949;
+  border:  solid 3px #3B4949;
 }
 
 
