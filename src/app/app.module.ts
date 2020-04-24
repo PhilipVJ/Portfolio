@@ -9,7 +9,7 @@ import {SocialmediaComponent} from './shared/socialmedia/socialmedia.component';
 import {ContactComponent} from './contact/contact.component';
 import {HomeComponent} from './home/home.component';
 import {AppRoutingModule} from './app-routing.module';
-import {BsDropdownModule, CarouselModule, CollapseModule} from 'ngx-bootstrap';
+import {AlertModule, BsDropdownModule, CarouselModule, CollapseModule} from 'ngx-bootstrap';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NoContentComponent } from './shared/no-content/no-content.component';
@@ -29,16 +29,17 @@ import { MobileMenuComponent } from './shared/mobile-menu/mobile-menu.component'
     NoContentComponent,
     MobileMenuComponent
   ],
-  imports: [
-    FontAwesomeModule,
-    BrowserModule,
-    AppRoutingModule,
-    CarouselModule,
-    CollapseModule,
-    BrowserAnimationsModule,
-    BsDropdownModule.forRoot(),
-    TooltipModule.forRoot()
-  ],
+    imports: [
+        FontAwesomeModule,
+        BrowserModule,
+        AppRoutingModule,
+        CarouselModule,
+        CollapseModule,
+        BrowserAnimationsModule,
+        BsDropdownModule.forRoot(),
+        TooltipModule.forRoot(),
+        AlertModule.forRoot()
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

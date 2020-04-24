@@ -16,4 +16,26 @@ p{
   #welcomeImage{
     width:80%;
   }
+
+  #infoSection{
+    width: 80% !important;
+  }
+
+}
+
+#infoSection{
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 640px;
+  border:  solid 5px #3B4949;
+}
+
+
+.headLine{
+  color: #D6A04B;
+}
+
+.text{
+  color: white;
 }
