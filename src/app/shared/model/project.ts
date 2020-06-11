@@ -5,7 +5,7 @@ export interface Project {
   smallDescription: string;
   detailedDescription: string;
   tools: string[];
-  techniques: string[];
+  techniques: string;
   downloadLink?: string;
   githubLink?: string;
   isSchoolProject: boolean;
