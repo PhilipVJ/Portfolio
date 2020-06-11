@@ -77,9 +77,25 @@ export class ProjectsService {
       title: 'Mazenko',
       tools: ['Unity, Visual Studio'],
       downloadLink: 'https://www.dropbox.com/s/hw2cqxdp1hyzy8l/Mazenko.rar?dl=0',
+      githubLink: 'https://github.com/PhilipVJ/Mazenko',
       isSchoolProject: true
     };
-    const projectList: Project[] = [whenHellArrived, zondi, webCrawler, portfolioSite, mazenko];
+    const agentify: Project = {
+      category: 'Unity',
+      // tslint:disable-next-line:max-line-length
+      detailedDescription: 'This is my exam project in Autonomous Agents and is a package for Unity, which makes it possible to make autonomous agents' +
+        // tslint:disable-next-line:max-line-length
+        ' in games. It is a behaviour-based control framework with a lot of additional features. The project also contains a demo, which shows some of its ' +
+        'capabilities ',
+      smallDescription: 'A package for Unity which makes it possible to make autonomous agents in games.',
+      img: 'assets/images/projects/Agentify.png',
+      techniques: 'Behaviour-based control',
+      title: 'Unity Agentify',
+      tools: ['Unity, Visual Studio'],
+      githubLink: 'https://github.com/PhilipVJ/Mazenko',
+      isSchoolProject: true
+    };
+    const projectList: Project[] = [whenHellArrived, zondi, webCrawler, portfolioSite, mazenko, agentify];
     this.allProjects = projectList;
   }
 
