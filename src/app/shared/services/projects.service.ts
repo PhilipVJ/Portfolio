@@ -92,10 +92,24 @@ export class ProjectsService {
       techniques: 'Behaviour-based control',
       title: 'Unity Agentify',
       tools: ['Unity, Visual Studio'],
-      githubLink: 'https://github.com/PhilipVJ/Mazenko',
+      githubLink: 'https://github.com/PhilipVJ/Unity-Agentify',
       isSchoolProject: true
     };
-    const projectList: Project[] = [whenHellArrived, zondi, webCrawler, portfolioSite, mazenko, agentify];
+    const celeritem: Project = {
+      category: 'Android',
+      // tslint:disable-next-line:max-line-length
+      detailedDescription: 'This is my exam project in Mobile Programming and is an exercise-tracking application, which makes it possible to realtime track' +
+        ' the users activities and find other users to do exercises with.',
+      smallDescription: 'An exercise-tracking application for Android',
+      img: 'assets/images/projects/Celeritem.png',
+      techniques: 'Firebase, Google Maps, SQLite, GPS',
+      title: 'Celeritem',
+      tools: ['Android Studio'],
+      githubLink: 'https://github.com/PhilipVJ/Celeritem',
+      isSchoolProject: true
+    };
+
+    const projectList: Project[] = [whenHellArrived, zondi, webCrawler, portfolioSite, mazenko, agentify, celeritem];
     this.allProjects = projectList;
   }
 
