@@ -9,12 +9,15 @@ import {SocialmediaComponent} from './shared/socialmedia/socialmedia.component';
 import {ContactComponent} from './contact/contact.component';
 import {HomeComponent} from './home/home.component';
 import {AppRoutingModule} from './app-routing.module';
-import {AlertModule, BsDropdownModule, CarouselModule, CollapseModule} from 'ngx-bootstrap';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NoContentComponent } from './shared/no-content/no-content.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { MobileMenuComponent } from './shared/mobile-menu/mobile-menu.component';
+import {CarouselModule} from 'ngx-bootstrap/carousel';
+import {CollapseModule} from 'ngx-bootstrap/collapse';
+import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
+import {AlertModule} from 'ngx-bootstrap/alert';
 
 @NgModule({
   declarations: [

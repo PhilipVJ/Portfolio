@@ -5,8 +5,8 @@ import {faUniversity} from '@fortawesome/free-solid-svg-icons';
 import {faTools} from '@fortawesome/free-solid-svg-icons';
 import {ProjectsService} from '../../shared/services/projects.service';
 import {Project} from '../../shared/model/project';
-import {BsDropdownConfig} from 'ngx-bootstrap';
 import {ApplicationService} from '../../shared/services/application.service';
+import {BsDropdownConfig} from 'ngx-bootstrap/dropdown';
 
 @Component({
   selector: 'app-projectsview',
