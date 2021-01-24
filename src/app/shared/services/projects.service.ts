@@ -113,7 +113,7 @@ export class ProjectsService {
       // tslint:disable-next-line:max-line-length
       detailedDescription: 'This is my final exam project from when I was studying Computer Science at EASV. It is an angular webapp using NgRx for state management. ' +
         'The app is using several Google services through an API made with NestJS. Testing is done with Jest and Cypress and the design is made with the help of Bootstrap. ' +
-        'There are two types of users - admins and partners. Partners can log in and send images and videos to the admins who later can review the material and publish it as articles to' +
+        'There are two types of users - admins and partners. Partners can log in and send images and videos to the admins who later can review the files and publish them as part of articles to' +
         ' the public section of the application.',
       smallDescription: 'A social media-like platform for fishermen',
       img: 'assets/images/projects/lystfiskeren_admin_menu.png',
