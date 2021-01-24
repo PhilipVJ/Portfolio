@@ -1,12 +1,11 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit, TemplateRef} from '@angular/core';
 import {faGithubSquare} from '@fortawesome/free-brands-svg-icons';
-import {faDownload} from '@fortawesome/free-solid-svg-icons';
-import {faUniversity} from '@fortawesome/free-solid-svg-icons';
-import {faTools} from '@fortawesome/free-solid-svg-icons';
+import {faDownload, faTools, faUniversity} from '@fortawesome/free-solid-svg-icons';
 import {ProjectsService} from '../../shared/services/projects.service';
 import {Project} from '../../shared/model/project';
 import {ApplicationService} from '../../shared/services/application.service';
 import {BsDropdownConfig} from 'ngx-bootstrap/dropdown';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-projectsview',
@@ -22,11 +21,18 @@ export class ProjectsComponent implements OnInit {
   projects: Project[];
   chosenCategory: string;
   innerWidth: any;
+  modalRef: BsModalRef;
+  selectedImage: string;
 
-  constructor(private projectsService: ProjectsService, private applicationService: ApplicationService) {
+  // tslint:disable-next-line:max-line-length
+  constructor(private projectsService: ProjectsService, private applicationService: ApplicationService, private modalService: BsModalService) {
     // Getting all projects and setting the chosen category to all from the start
     this.chosenCategory = 'Show all';
     this.projects = projectsService.getAllProjects();
+  }
+
+  openModal(url: string) {
+    this.selectedImage = url;
   }
 
   changeCategory(category: string) {

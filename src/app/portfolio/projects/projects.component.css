@@ -9,92 +9,96 @@ a, a:hover, a:focus, a:active {
   color: inherit;
 }
 
-a.chosenCategory, a:hover.chosenCategory, a:focus.chosenCategory, a:active.chosenCategory{
-  color:#D6A04B;
+a.chosenCategory, a:hover.chosenCategory, a:focus.chosenCategory, a:active.chosenCategory {
+  color: #D6A04B;
 }
 
 .iconSection {
   text-align: right;
 }
 
-.titleArea{
+.titleArea {
   min-height: 125px;
 }
 
-.detailedSection{
-  min-height:200px;
+.detailedSection {
+  min-height: 200px;
 }
 
 .projectView {
-  margin-top:25px;
+  margin-top: 25px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   width: 900px;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
 }
 
 @media only screen and (max-width: 920px) {
-  .projectView{
-    width:100%;
+  .projectView {
+    width: 100%;
   }
-  .projectCard{
-    width:100% !important;
+
+  .projectCard {
+    width: 100% !important;
   }
-  .buttonContainer{
+
+  .buttonContainer {
     width: 95% !important;
-    margin-top:15px;
+    margin-top: 15px;
   }
 }
 
-#schoolIcon{
-  float:right;
+#schoolIcon {
+  float: right;
 }
 
 .projectCard {
   margin-bottom: 50px;
   display: inline-block;
   text-align: justify;
-  width:400px;
-  margin-left:25px;
-  margin-right:25px;
+  width: 400px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
-.noProjectsView{
+
+.noProjectsView {
   width: 95%;
   text-align: center;
   margin: 75px auto 50px;
-  padding-right:10px;
-  padding-left:10px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
-#soonText{
+#soonText {
   font-size: 16px;
 }
 
-#noProjectsText{
+#noProjectsText {
   margin-top: 25px;
   font-size: 22px;
 }
-.center{
+
+.center {
   text-align: center;
 }
 
-.image{
-  width:90%;
+.image {
+  width: 90%;
   margin-bottom: 10px;
 }
 
-.categoryButton{
-margin-right:10px;
+.categoryButton {
+  margin-right: 10px;
 }
 
-.buttonContainer{
-  margin-top:10px;
+.buttonContainer {
+  margin-top: 10px;
   width: 900px;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: right;
 }
 
@@ -103,9 +107,29 @@ margin-right:10px;
 }
 
 
-
-.lastCard{
+.lastCard {
   width: 100%;
+}
+
+.additional-images {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  column-gap: 4px;
+}
+
+.image-area-modal {
+  width: 100%;
+}
+
+.modal-image {
+  object-fit: cover;
+  width: 80%;
+  height: 100%;
+  margin-top:15px;
+  margin-bottom: 15px;
 }
 
 

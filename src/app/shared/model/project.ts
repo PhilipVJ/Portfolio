@@ -10,4 +10,5 @@ export interface Project {
   githubLink?: string;
   isSchoolProject: boolean;
   addBorder?: boolean;
+  additionalImages?: string[];
 }

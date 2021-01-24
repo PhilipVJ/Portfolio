@@ -19,7 +19,7 @@
                                                                [class.chosenCategory]="chosenCategory === 'Unity'">Unity</a>
       </li>
       <li (click)="changeCategory('Angular')" role="menuitem"><a class="dropdown-item"
-                                                               [class.chosenCategory]="chosenCategory === 'Angular'">Angular</a>
+                                                                 [class.chosenCategory]="chosenCategory === 'Angular'">Angular</a>
       </li>
       <li (click)="changeCategory('Android')" role="menuitem"><a class="dropdown-item"
                                                                  [class.chosenCategory]="chosenCategory === 'Android'">Android</a>
@@ -32,37 +32,65 @@
 </div>
 
 <div class="projectView" *ngIf="projects.length>0">
-    <div class="card projectCard" *ngFor="let project of projects; first as isFirst"
-         [class.lastCard]="isFirst && projects.length % 2 != 0 && innerWidth>920">
-      <div class="card-body titleArea">
-        <div id="schoolIcon" tooltip="{{project.title}} was made as a school project" [delay]="500" container="body">
-          <fa-icon class="icon" *ngIf="project.isSchoolProject" size="1x" [icon]="schoolIcon"></fa-icon>
-        </div>
-        <h5 class="card-title">{{project.title}}</h5>
-        <p class="card-text">{{project.smallDescription}}</p>
+  <div class="card projectCard" *ngFor="let project of projects; first as isFirst"
+       [class.lastCard]="isFirst && projects.length % 2 != 0 && innerWidth>920">
+    <div class="card-body titleArea">
+      <div id="schoolIcon" tooltip="{{project.title}} was made as a school project" [delay]="500" container="body">
+        <fa-icon class="icon" *ngIf="project.isSchoolProject" size="1x" [icon]="schoolIcon"></fa-icon>
       </div>
-      <div class="center">
-        <img class="image" src="{{project.img}}" alt="Card image cap">
-      </div>
+      <h5 class="card-title">{{project.title}}</h5>
+      <p class="card-text">{{project.smallDescription}}</p>
+    </div>
+    <div class="center">
+      <img class="image" src="{{project.img}}" alt="Card image cap">
+    </div>
 
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item" [class.detailedSection]="!isFirst && innerWidth>920">{{project.detailedDescription}}</li>
-        <li class="list-group-item">Tools: {{project.tools}}</li>
-        <li class="list-group-item">Techniques: {{project.techniques}}</li>
-      </ul>
-      <div class="card-body iconSection">
-        <a *ngIf="project.githubLink!=null" href="{{project.githubLink}}">
-          <fa-icon class="icon" size="2x" [icon]="gitHubLogo"></fa-icon>
-        </a>
-        <a *ngIf="project.downloadLink!=null" href="{{project.downloadLink}}">
-          <fa-icon class="icon" size="2x" [icon]="downloadIcon"></fa-icon>
-        </a>
-        <p *ngIf="project.downloadLink == null && project.githubLink == null">No available code or example</p>
+    <div class="additional-images" *ngIf="project.additionalImages">
+      <div class="additional-image" *ngFor="let image of project.additionalImages">
+        <img class="image" src="{{image}}" alt="Card image cap" (click)="openModal(image); lgModal.show();">
       </div>
     </div>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"
+          [class.detailedSection]="!isFirst && innerWidth>920">{{project.detailedDescription}}</li>
+      <li class="list-group-item">Tools: {{project.tools}}</li>
+      <li class="list-group-item">Techniques: {{project.techniques}}</li>
+    </ul>
+    <div class="card-body iconSection">
+      <a *ngIf="project.githubLink!=null" href="{{project.githubLink}}">
+        <fa-icon class="icon" size="2x" [icon]="gitHubLogo"></fa-icon>
+      </a>
+      <a *ngIf="project.downloadLink!=null" href="{{project.downloadLink}}">
+        <fa-icon class="icon" size="2x" [icon]="downloadIcon"></fa-icon>
+      </a>
+      <p *ngIf="project.downloadLink == null && project.githubLink == null">No available code or example</p>
+    </div>
+  </div>
 </div>
 <div class=noProjectsView *ngIf="projects.length===0">
   <fa-icon class="icon" size="8x" [icon]="toolsIcon"></fa-icon>
   <p id="noProjectsText">No projects published in the chosen category</p>
   <p id="soonText">They will be here shortly though</p>
 </div>
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1"
+     role="dialog" aria-labelledby="dialog-sizes-name1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-sizes-name1" class="modal-title pull-left">Billedfremvisning</h4>
+        <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="image-area-modal">
+          <img class="modal-image center" src="{{selectedImage}}">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
