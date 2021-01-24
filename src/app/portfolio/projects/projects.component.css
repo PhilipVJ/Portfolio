@@ -118,6 +118,7 @@ a.chosenCategory, a:hover.chosenCategory, a:focus.chosenCategory, a:active.chose
   margin-left: auto;
   margin-right: auto;
   column-gap: 4px;
+  cursor:pointer;
 }
 
 .image-area-modal {
