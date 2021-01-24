@@ -5,7 +5,7 @@ import {ProjectsService} from '../../shared/services/projects.service';
 import {Project} from '../../shared/model/project';
 import {ApplicationService} from '../../shared/services/application.service';
 import {BsDropdownConfig} from 'ngx-bootstrap/dropdown';
-import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
+import {BsModalService} from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-projectsview',
@@ -21,7 +21,6 @@ export class ProjectsComponent implements OnInit {
   projects: Project[];
   chosenCategory: string;
   innerWidth: any;
-  modalRef: BsModalRef;
   selectedImage: string;
 
   // tslint:disable-next-line:max-line-length
