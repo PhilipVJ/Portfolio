@@ -23,7 +23,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "ngx-bootstrap": "^6.2.0",
     "rxjs": "~6.6.3",
     "tslib": "^2.1.0",
